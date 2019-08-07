@@ -8,13 +8,13 @@ Button b;
 TextAreaEvent()
 {
 l1=new Label();
+l1.setBounds(50,50,100,30);
 l2=new Label();
+l2.setBounds(160,50,100,30);
 t=new TextArea();
+t.setBounds(20,100,300,300);
 b=new Button("Click");
-l1.setBounds(20,20,50,50)
-l2.setBounds(100,20,50,50);
-t.setBounds();
-b.setBounds(100,200,50,50);
+b.setBounds(100,400,100,30);
 b.addActionListener(this);
 add(l1);
 add(l2);
@@ -26,6 +26,11 @@ setVisible(true);
 }
 public void actionPerformed(ActionEvent e)
 {
+
+String s=t.getText();
+String words[]=s.split("\\s");
+l1.setText("words :" + words.length);
+l2.setText("Characters:" + s.length());
 }
 public static void main(String args[])
 {
